@@ -1,5 +1,5 @@
 <?php
-// AUTHOR: enriqve
+// AUTHOR: enriqvedevnet
 
 // Primero definimos la conexion a la base de datos
 define('HOST_DB', 'localhost');  //Nombre del host, nomalmente localhost
