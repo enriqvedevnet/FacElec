@@ -59,21 +59,3 @@ if($_POST){
   }
 }
 ?>
-<!DOCTYPE html>
-<html lang="es-ES">
-<head> 
-<meta charset='utf-8'>
-<head> 
-<body>
-<h1>Ejemplo de buscador: by <a href="https://webreunidos.es" title="Mas tutoriales en nuestra web" target="_self">webreunidos.es</a></h1> 
-<form id="buscador" name="buscador" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>"> 
-    <input id="buscar" name="buscar" type="search" placeholder="Buscar aqui..." autofocus >
-    <input type="submit" name="buscador" class="boton peque aceptar" value="buscar">
-</form>
-<?php 
-// Resultado, numero de registros y contenido.
-echo $registros;
-echo $texto; 
-?>
-</body>
-</html>

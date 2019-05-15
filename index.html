@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head> 
+<meta charset='utf-8'>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="css/estilos.css">
+<head> 
+<body>
+ <?php include("buscador.php");? >
+ <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #0b619e;">
+     <a class="navbar-brand" href="#">Consulta de Documentos Electrónicos</a>
+     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+         aria-expanded="false" aria-label="Toggle navigation"></button>
+     <div class="collapse navbar-collapse" id="collapsibleNavId">
+         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+             <li class="nav-item active">
+                 <a class="nav-link" href="https://comutelperu.com">Volver <span class="sr-only">(current)</span></a>
+             </li>
+        
+            
+         </ul>
+         
+     </div>
+ </nav>
+
+ <div >
+        <img src="images/logo-comutel.png" class="mx-auto d-block mt-2">
+    
+ </div>
+ 
+    
+    
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="login mt-4" id="buscador" name="buscador" method="post">
+            <h3 class="text-center">Consulta</h3>
+            <div class="form-group">
+                <label for="Nombre">RUC</label>
+                <input type="text" class="form-control" type="search" name="buscar" id="buscar" placeholder="Escriba su RUC">
+            </div>
+            <div class="form-group">
+                <label for="nroDoc">Nro factura</label>
+                <input type="nroDoc" name="nroDoc" id="nroDoc" class="form-control" placeholder="FXXX-XXXX.">
+            </div>
+            <p class="text-center">
+                    <input type="submit" name="buscador" class="btn btn-primary" value="buscar">
+            </p>
+        </form>
+        <?php 
+        // Resultado, numero de registros y contenido.
+        echo $registros;
+        echo $texto; 
+        ?>
+
+         
+     
+ </div>
+
+</body>
+</html>
